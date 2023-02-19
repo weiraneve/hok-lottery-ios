@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct hok_lottery_iosApp: App {
+struct LotteryApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
