@@ -1,13 +1,6 @@
-//
-//  ContentView.swift
-//  hok-lottery-ios
-//
-//  Created by Weiran Sun on 2023/2/19.
-//
-
 import SwiftUI
 
-struct ContentView: View {
+struct LotteryView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -21,6 +14,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LotteryView()
     }
 }

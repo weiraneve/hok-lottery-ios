@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B698FD5C29A3C63100DA32B1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B698FD5B29A3C63100DA32B1 /* README.md */; };
 		C6CA60EB29A2783D0096AEF7 /* LotteryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA60EA29A2783D0096AEF7 /* LotteryApp.swift */; };
-		C6CA60ED29A2783D0096AEF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA60EC29A2783D0096AEF7 /* ContentView.swift */; };
+		C6CA60ED29A2783D0096AEF7 /* LotteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA60EC29A2783D0096AEF7 /* LotteryView.swift */; };
 		C6CA60EF29A2783E0096AEF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6CA60EE29A2783E0096AEF7 /* Assets.xcassets */; };
 		C6CA60F229A2783E0096AEF7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6CA60F129A2783E0096AEF7 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B698FD5B29A3C63100DA32B1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C6CA60E729A2783D0096AEF7 /* hok-lottery-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hok-lottery-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CA60EA29A2783D0096AEF7 /* LotteryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryApp.swift; sourceTree = "<group>"; };
-		C6CA60EC29A2783D0096AEF7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C6CA60EC29A2783D0096AEF7 /* LotteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryView.swift; sourceTree = "<group>"; };
 		C6CA60EE29A2783E0096AEF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6CA60F129A2783E0096AEF7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,10 +34,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B698FD5829A3C59000DA32B1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C6CA60EC29A2783D0096AEF7 /* LotteryView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B698FD5929A3C59A00DA32B1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B698FD5A29A3C5A400DA32B1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		C6CA60DE29A2783D0096AEF7 = {
 			isa = PBXGroup;
 			children = (
-				C6CA60E929A2783D0096AEF7 /* hok-lottery-ios */,
+				B698FD5B29A3C63100DA32B1 /* README.md */,
+				C6CA60E929A2783D0096AEF7 /* HokLotteryIOS */,
 				C6CA60E829A2783D0096AEF7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,15 +73,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C6CA60E929A2783D0096AEF7 /* hok-lottery-ios */ = {
+		C6CA60E929A2783D0096AEF7 /* HokLotteryIOS */ = {
 			isa = PBXGroup;
 			children = (
+				B698FD5A29A3C5A400DA32B1 /* Service */,
+				B698FD5929A3C59A00DA32B1 /* ViewModel */,
+				B698FD5829A3C59000DA32B1 /* View */,
 				C6CA60EA29A2783D0096AEF7 /* LotteryApp.swift */,
-				C6CA60EC29A2783D0096AEF7 /* ContentView.swift */,
 				C6CA60EE29A2783E0096AEF7 /* Assets.xcassets */,
 				C6CA60F029A2783E0096AEF7 /* Preview Content */,
 			);
-			path = "hok-lottery-ios";
+			path = HokLotteryIOS;
 			sourceTree = "<group>";
 		};
 		C6CA60F029A2783E0096AEF7 /* Preview Content */ = {
@@ -125,6 +152,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B698FD5C29A3C63100DA32B1 /* README.md in Resources */,
 				C6CA60F229A2783E0096AEF7 /* Preview Assets.xcassets in Resources */,
 				C6CA60EF29A2783E0096AEF7 /* Assets.xcassets in Resources */,
 			);
@@ -137,7 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6CA60ED29A2783D0096AEF7 /* ContentView.swift in Sources */,
+				C6CA60ED29A2783D0096AEF7 /* LotteryView.swift in Sources */,
 				C6CA60EB29A2783D0096AEF7 /* LotteryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +294,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"hok-lottery-ios/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HokLotteryIOS/Preview Content\"";
 				DEVELOPMENT_TEAM = UTX7WMHYP9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -280,7 +308,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.weiran.hok-lottery-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weiran.lottery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -295,7 +323,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"hok-lottery-ios/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HokLotteryIOS/Preview Content\"";
 				DEVELOPMENT_TEAM = UTX7WMHYP9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -309,7 +337,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.weiran.hok-lottery-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weiran.lottery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
