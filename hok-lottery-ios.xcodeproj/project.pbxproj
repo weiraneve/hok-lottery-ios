@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B61E4B2B29A4F8FB004A820F /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B61E4B2A29A4F8FB004A820F /* info.plist */; };
 		B698FD5C29A3C63100DA32B1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B698FD5B29A3C63100DA32B1 /* README.md */; };
 		C66D1BBA29A44856004A4725 /* LotteryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D1BB929A44856004A4725 /* LotteryViewModel.swift */; };
 		C66D1BBC29A448C7004A4725 /* LotteryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D1BBB29A448C7004A4725 /* LotteryService.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B61E4B2A29A4F8FB004A820F /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		B698FD5B29A3C63100DA32B1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C66D1BB929A44856004A4725 /* LotteryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewModel.swift; sourceTree = "<group>"; };
 		C66D1BBB29A448C7004A4725 /* LotteryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryService.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		C6CA60E929A2783D0096AEF7 /* HokLotteryIOS */ = {
 			isa = PBXGroup;
 			children = (
+				B61E4B2A29A4F8FB004A820F /* info.plist */,
 				B6C9E23D29A4E774007953A6 /* Service */,
 				C66D1BB729A4482E004A4725 /* ViewModel */,
 				B698FD5829A3C59000DA32B1 /* View */,
@@ -160,6 +163,7 @@
 			files = (
 				B698FD5C29A3C63100DA32B1 /* README.md in Resources */,
 				C6CA60F229A2783E0096AEF7 /* Preview Assets.xcassets in Resources */,
+				B61E4B2B29A4F8FB004A820F /* info.plist in Resources */,
 				C6CA60EF29A2783E0096AEF7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,12 +309,15 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HokLotteryIOS/Preview Content\"";
 				DEVELOPMENT_TEAM = UTX7WMHYP9;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = HokLotteryIOS/info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_OUTPUT_FORMAT = binary;
+				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,12 +341,15 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HokLotteryIOS/Preview Content\"";
 				DEVELOPMENT_TEAM = UTX7WMHYP9;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = HokLotteryIOS/info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_OUTPUT_FORMAT = binary;
+				INFOPLIST_PREPROCESS = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
