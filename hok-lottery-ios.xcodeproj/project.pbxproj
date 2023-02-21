@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B698FD5C29A3C63100DA32B1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B698FD5B29A3C63100DA32B1 /* README.md */; };
+		C66D1BBA29A44856004A4725 /* LotteryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D1BB929A44856004A4725 /* LotteryViewModel.swift */; };
+		C66D1BBC29A448C7004A4725 /* LotteryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D1BBB29A448C7004A4725 /* LotteryService.swift */; };
 		C6CA60EB29A2783D0096AEF7 /* LotteryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA60EA29A2783D0096AEF7 /* LotteryApp.swift */; };
 		C6CA60ED29A2783D0096AEF7 /* LotteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA60EC29A2783D0096AEF7 /* LotteryView.swift */; };
 		C6CA60EF29A2783E0096AEF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6CA60EE29A2783E0096AEF7 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 
 /* Begin PBXFileReference section */
 		B698FD5B29A3C63100DA32B1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C66D1BB929A44856004A4725 /* LotteryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewModel.swift; sourceTree = "<group>"; };
+		C66D1BBB29A448C7004A4725 /* LotteryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryService.swift; sourceTree = "<group>"; };
 		C6CA60E729A2783D0096AEF7 /* hok-lottery-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hok-lottery-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CA60EA29A2783D0096AEF7 /* LotteryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryApp.swift; sourceTree = "<group>"; };
 		C6CA60EC29A2783D0096AEF7 /* LotteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryView.swift; sourceTree = "<group>"; };
@@ -42,18 +46,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		B698FD5929A3C59A00DA32B1 /* ViewModel */ = {
+		C66D1BB729A4482E004A4725 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C66D1BB929A44856004A4725 /* LotteryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		B698FD5A29A3C5A400DA32B1 /* Service */ = {
+		C66D1BB829A44836004A4725 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				C66D1BBB29A448C7004A4725 /* LotteryService.swift */,
 			);
-			path = Service;
+			name = Service;
 			sourceTree = "<group>";
 		};
 		C6CA60DE29A2783D0096AEF7 = {
@@ -76,8 +82,8 @@
 		C6CA60E929A2783D0096AEF7 /* HokLotteryIOS */ = {
 			isa = PBXGroup;
 			children = (
-				B698FD5A29A3C5A400DA32B1 /* Service */,
-				B698FD5929A3C59A00DA32B1 /* ViewModel */,
+				C66D1BB829A44836004A4725 /* Service */,
+				C66D1BB729A4482E004A4725 /* ViewModel */,
 				B698FD5829A3C59000DA32B1 /* View */,
 				C6CA60EA29A2783D0096AEF7 /* LotteryApp.swift */,
 				C6CA60EE29A2783E0096AEF7 /* Assets.xcassets */,
@@ -166,7 +172,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6CA60ED29A2783D0096AEF7 /* LotteryView.swift in Sources */,
+				C66D1BBA29A44856004A4725 /* LotteryViewModel.swift in Sources */,
 				C6CA60EB29A2783D0096AEF7 /* LotteryApp.swift in Sources */,
+				C66D1BBC29A448C7004A4725 /* LotteryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
