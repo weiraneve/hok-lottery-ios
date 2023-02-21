@@ -46,20 +46,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B6C9E23D29A4E774007953A6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C66D1BBB29A448C7004A4725 /* LotteryService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		C66D1BB729A4482E004A4725 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				C66D1BB929A44856004A4725 /* LotteryViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		C66D1BB829A44836004A4725 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				C66D1BBB29A448C7004A4725 /* LotteryService.swift */,
-			);
-			name = Service;
 			sourceTree = "<group>";
 		};
 		C6CA60DE29A2783D0096AEF7 = {
@@ -82,7 +82,7 @@
 		C6CA60E929A2783D0096AEF7 /* HokLotteryIOS */ = {
 			isa = PBXGroup;
 			children = (
-				C66D1BB829A44836004A4725 /* Service */,
+				B6C9E23D29A4E774007953A6 /* Service */,
 				C66D1BB729A4482E004A4725 /* ViewModel */,
 				B698FD5829A3C59000DA32B1 /* View */,
 				C6CA60EA29A2783D0096AEF7 /* LotteryApp.swift */,
