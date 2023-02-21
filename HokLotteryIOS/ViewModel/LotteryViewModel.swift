@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 
 extension LotteryView {
     @MainActor final class LotteryViewModel: ObservableObject {
@@ -6,6 +7,7 @@ extension LotteryView {
         @Published var content: String = ""
         
         private let lotteryService: LotteryService
+        private var cancellableSet: Set<AnyCancellable> = []
         
         init(lotteryService: LotteryService) {
             self.lotteryService = lotteryService
@@ -13,10 +15,17 @@ extension LotteryView {
         }
         
         private func observeData() {
-            print("invoke observeData method")
-            if keyword != "" {
-                content = lotteryService.fetchData(by: keyword)
-            }
+            $keyword
+                .debounce(for: 0.5, scheduler: RunLoop.main)
+                .sink { keyword in
+                    if keyword.isEmpty {
+                        self.content = "void"
+                    } else {
+                        self.content = self.lotteryService.fetchData(by: keyword)
+                    }
+                }
+                .store(in: &self.cancellableSet)
+            
         }
     }
 }

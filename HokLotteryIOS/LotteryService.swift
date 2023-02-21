@@ -13,7 +13,7 @@ final class LotteryServiceImpl: LotteryService {
     }
     
     func fetchData(by keyword: String) -> String {
-        return keyword + " over"
+        return keyword + " result is successful"
     }
     
 }
