@@ -9,8 +9,9 @@ struct LotteryView: View {
     
     var body: some View {
         List {
-            TextField("Keyword", text: $lotteryViewModel.keyword)
-            Text(lotteryViewModel.content)
+            Image("all_hero").resizable().zIndex(0)
+            TextField("Keyword", text: $lotteryViewModel.keyword).zIndex(1)
+            Text(lotteryViewModel.content).zIndex(1)
         }
     }
 }
