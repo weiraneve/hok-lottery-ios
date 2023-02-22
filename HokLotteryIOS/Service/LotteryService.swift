@@ -2,15 +2,15 @@ import Foundation
 
 struct LotteryEntity: Decodable {
     let data: String?
-    let teamId: String?
-    let time: Date?
     let logs: [LogResponse]?
+    let teamId: Int?
+    let time: String?
 }
 
 struct LogResponse: Decodable {
-    let teamId: Int?
     let pickGroup: String?
-    let time: Date?
+    let teamId: Int?
+    let time: String?
 }
 
 protocol LotteryService {
@@ -26,7 +26,7 @@ final class LotteryServiceImpl: LotteryService {
         let request = NSMutableURLRequest(url: URL(string: url)!)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        var params = ["encryptCode" : "asd"]
+        let params = ["encryptCode" : "asd"]
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: params, options: JSONSerialization.WritingOptions())
             let task = session.dataTask(with: request as URLRequest as URLRequest, completionHandler: {(data, response, error) in
@@ -41,8 +41,17 @@ final class LotteryServiceImpl: LotteryService {
                 if let data = data {
                     do {
                         let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions())
-                        result = try JSONDecoder().decode(LotteryEntity.self, from: data)
-                        print ("data = \(result?.data ?? "null")")
+//                        result = try JSONDecoder().decode(LotteryEntity.self, from: json)
+//                        print ("data = \(result?.data ?? "null")")
+                        print ("data = \(json)")
+                        
+//                        let jsonData = JSON.data(using: .utf8)!
+//                        let blogPost: BlogPost = try! JSONDecoder().decode(BlogPost.self, from: jsonData)
+//                        print(blogPost.title) // Prints: "Optionals in Swift explained: 5 things you should know"
+                        
+                        let lotteryEntity: LotteryEntity? = try? JSONDecoder().decode(LotteryEntity.self, from: data)
+                        print(lotteryEntity?.data)
+                        
                     } catch _ {
                         print ("OOps not good JSON formatted response")
                     }
