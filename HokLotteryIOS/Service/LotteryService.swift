@@ -1,16 +1,16 @@
 import Foundation
 
 struct LotteryEntity: Decodable {
-    let data: String
-    let teamId: String
-    let time: Date
-    let logs: [LogResponse]
+    let data: String?
+    let teamId: String?
+    let time: Date?
+    let logs: [LogResponse]?
 }
 
 struct LogResponse: Decodable {
-    let teamId: Int
-    let pickGroup: String
-    let time: Date
+    let teamId: Int?
+    let pickGroup: String?
+    let time: Date?
 }
 
 protocol LotteryService {
@@ -20,10 +20,10 @@ protocol LotteryService {
 final class LotteryServiceImpl: LotteryService {
     
     func fetchData(by keyword: String) -> String {
-        lazy var result: LotteryEntity = LotteryEntity(data: "", teamId: "", time: Date(), logs: [])
+        var result: LotteryEntity?
         let session = URLSession.shared
         let url = "http://steveay.com:8034"
-        let request = NSMutableURLRequest(url: NSURL(string: url)! as URL)
+        let request = NSMutableURLRequest(url: URL(string: url)!)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         var params = ["encryptCode" : "asd"]
@@ -40,9 +40,9 @@ final class LotteryServiceImpl: LotteryService {
                 }
                 if let data = data {
                     do {
-//                        let data = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions())
+                        let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions())
                         result = try JSONDecoder().decode(LotteryEntity.self, from: data)
-                        print ("data = \(result)")
+                        print ("data = \(result?.data ?? "null")")
                     } catch _ {
                         print ("OOps not good JSON formatted response")
                     }
@@ -50,9 +50,10 @@ final class LotteryServiceImpl: LotteryService {
             })
             task.resume()
         } catch _ {
+            // failure(requestError)
             print ("Oops something happened buddy")
         }
-        return result.data
+        return result?.data ?? "null"
     }
     
 }
