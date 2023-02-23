@@ -15,13 +15,17 @@ extension LotteryView {
         }
         
         private func observeData() {
+            let success = {(content: String) -> Void in
+                self.content = content
+            }
+            
             $keyword
                 .debounce(for: 0.5, scheduler: RunLoop.main)
                 .sink { keyword in
                     if keyword.isEmpty {
                         self.content = "void"
                     } else {
-                        self.content = self.lotteryService.fetchData(by: keyword)
+                        self.lotteryService.fetchData(by: keyword, success: success)
                     }
                 }
                 .store(in: &self.cancellableSet)
