@@ -9,10 +9,12 @@ struct LotteryView: View {
     
     var body: some View {
         ZStack {
-            Image("all_hero")
-            List {
-                TextField("Keyword", text: $lotteryViewModel.keyword).zIndex(1)
-                Text(lotteryViewModel.content).zIndex(1)
+            Image(uiImage: UIImage(named: "all_hero")!)
+                .resizable()
+                .scaledToFit()
+            VStack {
+                TextField("Keyword", text: $lotteryViewModel.keyword)
+                Text(lotteryViewModel.content)
             }
         }
     }
@@ -21,9 +23,7 @@ struct LotteryView: View {
 struct LotteryView_Previews: PreviewProvider {
     
     final class FakeLotteryService: LotteryService {
-        func fetchData(by keyword: String) -> String {
-            return keyword + "fake"
-        }
+        func fetchData(by keyword: String, success: @escaping (String) -> Void) {}
     }
     
     static var previews: some View {
