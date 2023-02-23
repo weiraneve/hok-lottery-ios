@@ -8,14 +8,18 @@ struct LotteryView: View {
     }
     
     var body: some View {
-        ZStack {
-            Image(uiImage: UIImage(named: "all_hero")!)
-                .resizable()
-                .scaledToFit()
-            VStack {
-                TextField("Keyword", text: $lotteryViewModel.keyword)
-                Text(lotteryViewModel.content)
-            }
+//        ZStack {
+//            Image(uiImage: UIImage(named: "all_hero")!)
+//                .resizable()
+//                .scaledToFit()
+//            VStack {
+//                TextField("Keyword", text: $lotteryViewModel.keyword)
+//                Text(lotteryViewModel.content)
+//            }
+//        }
+        List {
+            TextField("Keyword", text: $lotteryViewModel.keyword)
+                            Text(lotteryViewModel.content)
         }
     }
 }

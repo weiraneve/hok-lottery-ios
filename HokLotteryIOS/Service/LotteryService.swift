@@ -41,14 +41,17 @@ final class LotteryServiceImpl: LotteryService {
                 if let data = data {
                     do {
                         let lotteryEntity: LotteryEntity? = try JSONDecoder().decode(LotteryEntity.self, from: data)
-                        let pickData = "\(lotteryEntity!.data) "
-                        print("result = \(result)")
+                        let pickData = "{选取内容: \(lotteryEntity!.data) "
                         var team: String = ""
                         if (lotteryEntity?.teamId != nil) {
                             team = "队伍: \(lotteryEntity?.teamId ?? 00) "
                         }
-                        let time = "时间: \(lotteryEntity!.time) "
-                        result += pickData + team + time
+                        let time = "时间: \(lotteryEntity!.time)} \n"
+                        var logs = "历史记录: "
+                        for log in lotteryEntity?.logs ?? [] {
+                            logs += "{选取内容: \(log.pickGroup) 队伍: \(log.teamId) 时间: \(log.time) }"
+                        }
+                        result += pickData + team + time + logs
                         success(result)
                     } catch _ {
                         print ("OOps not good JSON formatted response")
