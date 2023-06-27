@@ -15,21 +15,25 @@ extension LotteryView {
         }
         
         private func observeData() {
-            let success = {(content: String) -> Void in
-                self.content = content
-            }
-            
             $keyword
                 .debounce(for: 0.5, scheduler: RunLoop.main)
                 .sink { keyword in
                     if keyword.isEmpty {
                         self.content = "void"
                     } else {
-                        self.lotteryService.fetchData(by: keyword, success: success)
+                        self.lotteryService.fetchData(by: keyword) { result in
+                            DispatchQueue.main.async {
+                                switch result {
+                                case .success(let content):
+                                    self.content = content
+                                case .failure(let error):
+                                    self.content = "Error: \(error.localizedDescription)"
+                                }
+                            }
+                        }
                     }
                 }
                 .store(in: &self.cancellableSet)
-            
         }
     }
 }

@@ -8,26 +8,21 @@ struct LotteryView: View {
     }
     
     var body: some View {
-//        ZStack {
-//            Image(uiImage: UIImage(named: "all_hero")!)
-//                .resizable()
-//                .scaledToFit()
-//            VStack {
-//                TextField("Keyword", text: $lotteryViewModel.keyword)
-//                Text(lotteryViewModel.content)
-//            }
-//        }
-        List {
+        VStack {
             TextField("Keyword", text: $lotteryViewModel.keyword)
-                            Text(lotteryViewModel.content)
-        }
+                .padding()
+                .background(Color.gray.opacity(0.2))
+                .cornerRadius(8)
+            Text(lotteryViewModel.content)
+                .padding()
+        }.padding()
     }
 }
 
 struct LotteryView_Previews: PreviewProvider {
     
     final class FakeLotteryService: LotteryService {
-        func fetchData(by keyword: String, success: @escaping (String) -> Void) {}
+        func fetchData(by keyword: String, completion: @escaping (Result<String, Error>) -> Void) {}
     }
     
     static var previews: some View {

@@ -10,6 +10,7 @@
 		B698FD5C29A3C63100DA32B1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B698FD5B29A3C63100DA32B1 /* README.md */; };
 		C66D1BBA29A44856004A4725 /* LotteryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D1BB929A44856004A4725 /* LotteryViewModel.swift */; };
 		C66D1BBC29A448C7004A4725 /* LotteryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D1BBB29A448C7004A4725 /* LotteryService.swift */; };
+		C69D7E152A4AE28E005928ED /* LotteryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69D7E142A4AE28E005928ED /* LotteryEntity.swift */; };
 		C6CA60EB29A2783D0096AEF7 /* LotteryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA60EA29A2783D0096AEF7 /* LotteryApp.swift */; };
 		C6CA60ED29A2783D0096AEF7 /* LotteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CA60EC29A2783D0096AEF7 /* LotteryView.swift */; };
 		C6CA60EF29A2783E0096AEF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6CA60EE29A2783E0096AEF7 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		B698FD5B29A3C63100DA32B1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C66D1BB929A44856004A4725 /* LotteryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewModel.swift; sourceTree = "<group>"; };
 		C66D1BBB29A448C7004A4725 /* LotteryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryService.swift; sourceTree = "<group>"; };
+		C69D7E142A4AE28E005928ED /* LotteryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryEntity.swift; sourceTree = "<group>"; };
 		C6CA60E729A2783D0096AEF7 /* hok-lottery-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hok-lottery-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CA60EA29A2783D0096AEF7 /* LotteryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryApp.swift; sourceTree = "<group>"; };
 		C6CA60EC29A2783D0096AEF7 /* LotteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		C69D7E132A4AE27D005928ED /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C69D7E142A4AE28E005928ED /* LotteryEntity.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		C6CA60DE29A2783D0096AEF7 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 		C6CA60E929A2783D0096AEF7 /* HokLotteryIOS */ = {
 			isa = PBXGroup;
 			children = (
+				C69D7E132A4AE27D005928ED /* model */,
 				B6C9E23D29A4E774007953A6 /* Service */,
 				C66D1BB729A4482E004A4725 /* ViewModel */,
 				B698FD5829A3C59000DA32B1 /* View */,
@@ -173,6 +184,7 @@
 			files = (
 				C6CA60ED29A2783D0096AEF7 /* LotteryView.swift in Sources */,
 				C66D1BBA29A44856004A4725 /* LotteryViewModel.swift in Sources */,
+				C69D7E152A4AE28E005928ED /* LotteryEntity.swift in Sources */,
 				C6CA60EB29A2783D0096AEF7 /* LotteryApp.swift in Sources */,
 				C66D1BBC29A448C7004A4725 /* LotteryService.swift in Sources */,
 			);
