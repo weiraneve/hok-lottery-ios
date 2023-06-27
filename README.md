@@ -3,5 +3,3 @@
 - [后端](https://github.com/weiraneve?tab=repositories)
 - [Web前端](https://github.com/weiraneve/hok-front)
 - [Android移动端](https://github.com/weiraneve/hok-lottery-android)
-
-还有一些关于swift code style、数据流架构、UI的问题，因为swfit水平有限没有解决......
